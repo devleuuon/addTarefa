@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body {
+    background-image: url(./img/_DSC1421.jpg);
+    background-position: center;  /* posiciona imagem */
+    background-size: cover;
+}
+
+button {
+    background-color: white;
+    color: rgb(3, 3, 58);
+    border: 2px solid rgb(3, 3, 58);
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: rgb(3, 3, 58);
+    color: white; /*muda cor de fundo ao passar o mouse*/
+}
+
+button:hover > i {
+    color: white;
+}
+
+button i {
+    color: rgb(3, 3, 58);
+    font-weight: bold;
+    pointer-events: none; /*ao clicar sobre botões envia formulário*/
+}
+
+input, select {
+    padding: 0.25rem 0.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+/* Header */
+
+.todo-container {
+    max-width: 450px;
+    margin: 3rem auto 0;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0.1rem 0.3rem;
+    border-bottom: 1px solid white;
+}
+
+/* form  */
+
+#todo-form, #edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(115, 112, 112);
+}
+
+#todo-form p, #edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control input {
+    margin-right: 0.3rem;
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
+}
+
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(115, 112, 112);
+    display: flex;
+}
+
+#toolbar h4 {
+    margin-bottom: .5rem;
+}
+
+#search {
+    border-right: 1px solid rgb(115, 112, 112);
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form {
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select {
+    flex: 1;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-around; /*separa os botões*/
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(115, 112, 112);
+    transition: .3s;
+}
+
+.todo h3 {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.todo button {
+     margin-left: 0.4rem; /* espaço nos botões */
+}
+
+.done {
+    background-color: rgb(3, 3, 58);
+}
+
+.done h3 {
+    color: white;
+    text-decoration: line-through; /*Traça linha na palavra*/
+    font-style: italic;
+}
